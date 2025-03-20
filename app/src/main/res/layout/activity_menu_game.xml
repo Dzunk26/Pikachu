@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.onetonline.presentation.view.MenuGame">
+
+    <!-- The Left side -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_weight="1"
+            android:background="#00BCD4"
+            android:orientation="horizontal">
+            <!-- Tab Selector -->
+
+            <!-- The top area of the app -->
+            <TabHost
+                android:id="@+id/mytab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:orientation="vertical">
+
+            <!-- The bottom area of the app -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- The right side -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#FFC107">
+
+        <!-- Buttons and table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnClassic"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="@string/btn_classic"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHelp1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="@string/btn_continue"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHelp2"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="@string/btn_online"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHelp3"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+        <EditText
+            android:id="@+id/etPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/et_policy"
+            android:textSize="13sp"
+            android:layout_gravity="center"/>
+
+        <!-- Music and Audio buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnMusic"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="@string/btn_music" />
+
+            <Button
+                android:id="@+id/btnAudio"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="@string/btn_audio" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
